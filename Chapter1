@@ -1,0 +1,90 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+C++ Primer Chapter 1 practcice
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    //Exercise 1.3: print hellow World
+    cout<<"Hello World\n";
+    
+    //Excercise 1.4: Write program that uses *
+    int mult = 0;
+    mult = 5 * 34;
+    cout << mult << "\n";
+    
+    //Exercise 1.6: Explain if this is legal. Not legal, need cout per expression
+    /*int v1 = 12;
+    int v2 = 46;
+    
+    cout << "The sum of "<< v1;
+    << " and  " << v2;
+    << " is " << v1 + v2 << endl;*/
+    
+    //Exercise 1.8. Which of these are legal?
+    //cout << "/*"; //legal
+    //cout << "*/"; //legal
+    //cout << /* "*/" */; //not
+    //cout << /* "*/" /* "/*" */; //legal
+    
+    //Exercise 1.9: Write a program that uses while to sum numbers from 50 to 100
+    int answer = 0;
+    int increment = 50;
+    
+    while (increment <= 100){
+        answer+=increment;
+        increment++;
+    }
+    cout << answer << "\n";
+    
+    //Exercise  1.10: ise -- to print 10 to 0 using while
+    increment = 10;
+    while (increment >= 0){
+        cout << increment << " ";
+        increment --;
+    }
+    
+    //Excercise 1.11: Write a program that prompte the user fro two integers and prints the range 
+    /*int v1, v2; //v1 is the smaller number (we assume)
+    cout << "\n Please enter two space seperated integers ";
+    cin >> v1 >> v2;
+    //check v1 is smaller and switch if not
+    int v3;
+    if (v2 < v1){
+        v3=v1;
+        v1=v2;
+        v2=v3;
+    }
+    //output range
+    for (int i = v1; i <= v2; i++){
+        cout << i << " ";
+    }*/
+    
+    //Exercise 1.12:  What does this do?
+    //should output 1
+    int sum = 0;
+    for (int i = 100; i <= 100; i++)
+        sum+=1;
+    cout <<"\n" << sum;
+
+    //Excercise 1.14: Advantages of for vs while?
+    //For loop is better because guareented exit condition
+    
+    //Exercise 1.15: Run the below to see the errors outputted
+    /*cout << "read each file." << endl: //error: expected ‘;’ before ‘:’ token
+    cout << Update master. << endl; //error: ‘Update’ was not declared in this scope. Missing quotes
+    cout << "Write new master." endl; //error: expected ‘;’ before ‘endl’ second << is missing*/
+    
+    return 0;
+    //Exercise 1.2: if return -1 program am finishes with exit code 255 when it usually finishes with 0 (seems like unsigned int)
+}
